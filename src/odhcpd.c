@@ -58,7 +58,7 @@ static void sighandler(_unused int signal)
 int main()
 {
 	openlog("odhcpd", LOG_PERROR | LOG_PID, LOG_DAEMON);
-	setlogmask(LOG_UPTO(LOG_WARNING));
+	setlogmask(LOG_UPTO(LOG_NOTICE));
 	uloop_init();
 
 	if (getuid() != 0) {
